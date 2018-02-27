@@ -11,6 +11,7 @@ html {
 }
 body {
   margin: 0;
+  background-image: url("../images/galaxy.jpg");
 }
 article,
 aside,
