@@ -1,0 +1,15 @@
+body {
+	background-image: url("../images/galaxy.jpg");
+	color: #CCCC14;
+	background-color: #000000;
+	}
+.navbar-default {
+	background-color: transparent;
+	border-color: white
+}
+.jumbotron{
+	background-color: transparent;
+}
+
+
+
