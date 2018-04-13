@@ -5,11 +5,20 @@ body {
 	}
 .navbar-default {
 	background-color: transparent;
-	border-color: white
+	background-image: url("../images/galaxy2.jpg");
+	border-color: white;
 }
+
+.navbar-default .navbar-nav > li > a {
+	color: #CCCC14;
+}
+
+
 .jumbotron{
 	background-color: transparent;
 }
+
+
 
 
 
