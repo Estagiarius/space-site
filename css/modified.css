@@ -47,8 +47,8 @@ body {
 */
 
 .navbar-default {
-	background-color: transparent;
-	background-image: url("../images/galaxy2.jpg");
+	background-color: #04061c;
+	/*background-image: url("../images/galaxy2.jpg");*/
 	border-color: white;
 }
 
