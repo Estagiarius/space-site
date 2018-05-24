@@ -20,7 +20,7 @@
 
 		$_SESSION['logado'] = 1;
 
-		header('Location: index.html');
+		header('Location: redirecionamento.html');
 	}
 	else{
 		$fechar = mysqli_close($con);

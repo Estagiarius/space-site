@@ -24,4 +24,4 @@ $close = mysqli_close($con);
 
 ?>
 
-<a href="login.html">Redirecionar</a>
+<a href="redirecionamento.html">Redirecionar</a>
