@@ -1,5 +1,15 @@
+@font-face {
+    font-family: ardestine;
+    src: url("../fonts/ardestine.ttf");
+}
+
+.fonte-nav{
+  font-family: ardestine;
+  }
+
+
 body {
-	background-image: url("../images/galaxy.jpg");
+	background-image: url("../images/galaxy3.jpg");
 	color: #CCCC14;
 	background-color: #000000;
 
@@ -45,6 +55,9 @@ body {
 	background-image: url("../images/galaxy-login.jpg");
 }
 */
+
+
+
 
 .navbar-default {
 	background-color: #04061c;
