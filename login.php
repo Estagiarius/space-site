@@ -50,13 +50,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="nav navbar-nav navbar-right">
 
-              <li><a href="index.php">Home </a></li>
-                        <li><a href="download.php">Download </a></li>
-                        <li><a href="suporte.php">Suporte </a></li>
-                        <li><a href="sobre.php">Sobre </a></li>
-                        <li><a href="faq.php">FAQ </a></li>   
-                        <li><a href="login.php">Login </a></li> 
-                        <li><a href="#">Olá, <?php echo $logado ?></a></li>   
+                            <li><a href="index.php">Home </a></li>
+                            <li><a href="download.php">Download </a></li>
+                            <li><a href="suporte.php">Suporte </a></li>
+                            <li><a href="sobre.php">Sobre </a></li>
+                            <li><a href="faq.php">FAQ </a></li>   
+                            <li><a href="login.php">Login </a></li> 
+                            <li><a href="area-jogador.php">Olá, <?php echo $logado ?></a></li>     
                     </ul>
         </div>
       </div>

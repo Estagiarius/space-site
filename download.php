@@ -49,14 +49,14 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="nav navbar-nav navbar-right">
 
-							<li><a href="index.php">Home </a></li>
-		                    <li><a href="download.php">Download </a></li>
-		                    <li><a href="suporte.php">Suporte </a></li>
-		                    <li><a href="sobre.php">Sobre </a></li>
-		                    <li><a href="faq.php">FAQ </a></li>   
-		                    <li><a href="login.php">Login </a></li>	
-		                    <li><a href="#">Olá, <?php echo $logado ?></a></li>		
-		                </ul>
+                            <li><a href="index.php">Home </a></li>
+                            <li><a href="download.php">Download </a></li>
+                            <li><a href="suporte.php">Suporte </a></li>
+                            <li><a href="sobre.php">Sobre </a></li>
+                            <li><a href="faq.php">FAQ </a></li>   
+                            <li><a href="<?php echo $linkSessao ?>"><?php echo $stringLogin ?> </a></li> 
+                            <li><a href="<?php echo $linkjogador ?>">Olá, <?php echo $logado ?></a></li>     
+                    </ul>
 				</div>
 			</div>
 		</nav>
@@ -64,50 +64,58 @@
 		<section>
 			<!-- Informações Sobre o Download -->
 			<div class="container" style="margin-top: 50px;">
-				<h1 class="fonte-nav">Download do Jogo</h1>
-				<br/>
-
-				<h4>Requisitos mínimos do sistema:</h4>
-				<p>Para Sistemas Microsoft Windows: <br/>
-					- Processador: Quad-Core de 1,5 GHz <br/>
-					- Memória RAM: 1GB <br/>
-				- Memória Interna Disponível: 500MB</p>
-
-
-				<p>Para Dispositivos Android: <br/>
-							- Versão do Android: Android 4.1 (Kitkat) <br/>
-				      		- Processador: Dual-Core de 1,2 GHz <br/>
-				      		- Memória RAM: 1,5GB <br/>
-				      		- Memória Interna Disponível: 50MB</p>
-
-				<br/>
-				<!-- Botões de Download e Doação-->
-				<button type="button" class="btn-lg btn-primary">Download Space (Windows)</button>
-				<br/>
-				<br/>
-				<br/>
-
-				<button type="button" class="btn-lg btn-success">Download Space (Android)</button>
-
-				<br/>
-
-				<h5>ou</h5>
-
-				<br/>
-
-				<!-- Colocar um evento JQuery aqui (Delimitar valores do Botão?) -->
-				<form class="form-inline">
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputAmount">Insira um Valor (em BRL)</label>
-						<div class="input-group">
-							<div class="input-group-addon">R$</div>
-							<input type="text" class="form-control" id="exampleInputAmount" placeholder="Insira um Valor">
-							<div class="input-group-addon">.00</div>
-						</div>
+				<div class="row">
+					<div class="col-md-6 pull-right">
+						<img src="images/demo1.png" class="img-responsive" alt="Imagem do Jogo SPACE">
 					</div>
-					<button type="submit" class="btn btn-warning">Faça uma Doação*</button>
-				</form>
-				<h6><i>* Doações a partir de 1 BRL. </i></h6>
+
+					<div class="col-md-6 pull-left">
+						<h1 class="fonte-nav">Download do Jogo</h1>
+						<br/>
+
+						<h4>Requisitos mínimos do sistema:</h4>
+						<p>Para Sistemas Microsoft Windows: <br/>
+							- Processador: Quad-Core de 1,5 GHz <br/>
+							- Memória RAM: 1GB <br/>
+						- Memória Interna Disponível: 500MB</p>
+
+
+						<p>Para Dispositivos Android: <br/>
+									- Versão do Android: Android 4.1 (Kitkat) <br/>
+						      		- Processador: Dual-Core de 1,2 GHz <br/>
+						      		- Memória RAM: 1,5GB <br/>
+						      		- Memória Interna Disponível: 50MB</p>
+
+						<br/>
+						<!-- Botões de Download e Doação-->
+						<button type="button" class="btn-lg btn-primary">Download Space (Windows)</button>
+						<br/>
+						<br/>
+						<br/>
+
+						<button type="button" class="btn-lg btn-success">Download Space (Android)</button>
+
+						<br/>
+
+						<h5>ou</h5>
+
+						<br/>
+
+						<!-- Colocar um evento JQuery aqui (Delimitar valores do Botão?) -->
+						<form class="form-inline" action="verificalogindoacao.php" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="exampleInputAmount">Insira um Valor (em BRL)</label>
+								<div class="input-group">
+									<div class="input-group-addon">R$</div>
+									<input type="number" name="txtValorDoacao" class="form-control" id="exampleInputAmount" placeholder="Insira um Valor">
+									<!-- div class="input-group-addon">.00</div -->
+								</div>
+							</div>
+							<button type="submit" name="btnDoacao" value="DOAR" class="btn btn-warning">Faça uma Doação*</button>
+						</form>
+						<h6><i>* Doações a partir de 1 BRL. </i></h6>
+					</div>
+				</div>	
 			</div>
 		</section>
 	</body>

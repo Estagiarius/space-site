@@ -25,7 +25,9 @@
 
         <!-- PHP -->
         <?php
+            $userLogin = $_SESSION['userLogin'];
             include "sessao.php";
+            include "conexao.php";
         ?>
 
 
@@ -65,7 +67,17 @@
         <section>
             <!-- Conteúdo da Página -->
             <div class="container" style="margin-top: 50px;">
-                <h1>Parabéns, você foi cadastrado com sucesso!</h1>
+                <h1>Central de Doação</h1>
+                <h2>Muito obrigado por contribuir! Seus últimos boletos estão na listagem abaixo!</h2>
+
+                <table>
+                    <th>Data de Geração</th>
+                    <th>Valor</th>
+                </table>
+                <?php 
+                    
+
+
             </div>
         </section>
     </body>

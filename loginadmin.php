@@ -25,7 +25,7 @@
 
       <!-- PHP -->
       <?php
-      include "sessao.php";
+        include "sessao.php";
       ?>
 
 
@@ -55,47 +55,39 @@
                             <li><a href="suporte.php">Suporte </a></li>
                             <li><a href="sobre.php">Sobre </a></li>
                             <li><a href="faq.php">FAQ </a></li>   
-                            <li><a href="<?php echo $linkSessao ?>"><?php echo $stringLogin ?> </a></li> 
-                            <li><a href="<?php echo $linkjogador ?>">Olá, <?php echo $logado ?></a></li>     
+                            <li><a href="login.php">Login </a></li> 
+                            <li><a href="area-jogador.php">Olá, <?php echo $logado ?></a></li>     
                     </ul>
         </div>
       </div>
     </nav>
-
-    <section>
-    	<div class="container" style="margin-top: 50px;">  
-			  <!--Colocar uma imagem aqui (?) -->
-		      <h1 class="fonte-nav">Suporte</h1>
-          <!-- Informações de Contato -->
-		      <div class="col-md-8">
-              <h4>Caso queira entrar em contato, sugerir mudanças ou pedir mais informações sobre o jogo, envie um email para example@lorem.com,
-              ou preencha o formulário de envio abaixo.<br/>
-              Em caso de algum bug ou falha no jogo, contacte-nos imediatamente usando o formulário para que possamos melhorar a experiência de jogo
-              e corrigir esses bugs.<br/>
-              </h4>      	
-              <br/>
-              <!-- Formulário de Contato -->                
-              <form>
-                <fieldset>
-                  <legend class="fonte-nav" style="color: #CCCC14">Contato</legend>
-                  <p>
-                    <label for="nome">Nome: </label>
-                    <input type=text class="form-control" id="nome" name=txtnome />
-                  </p>
-                  <p>
-                    <label for="email">E-mail: </label>
-                    <input type=email class="form-control" id="email" name=txtemail />
-                  </p>
-                  <p>
-                    <label for="mensagem">Mensagem: </label>
-                    <textarea type=text class="form-control" id="mensagem" name=txtmensagem rows="8"> </textarea>
-                  </p>
-                  
-                  <button type="submit" class="btn-lg btn-primary">Enviar</button>
-  			        </fieldset>
-              </form>               
+    <!-- Conteúdo da Página -->
+    <div class="container">
+       <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel-pontuacao panel-login">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <!-- Formulário de Login/Cadastro -->
+                  <form id="login-form" action="verificaAdminLogin.php" method="post" role="form" style="display: block;">
+                    <h2 class="fonte-nav">ADMNISTRADOR</h2>
+                      <div class="form-group">
+                        <input type="text" name="txtUsernameAdmin" id="username" tabindex="1" class="form-control" placeholder="Nome de Usuário" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="txtPasswordAdmin" id="password" tabindex="2" class="form-control" placeholder="Senha">
+                      </div>
+                      <div class="col-xs-6 form-group pull-right">     
+                            <input type="submit" name="btnLogin" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Login">
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>    
           </div>
-        </div>  
-    </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

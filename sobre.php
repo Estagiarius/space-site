@@ -53,9 +53,9 @@
                             <li><a href="suporte.php">Suporte </a></li>
                             <li><a href="sobre.php">Sobre </a></li>
                             <li><a href="faq.php">FAQ </a></li>   
-                            <li><a href="login.php">Login </a></li> 
-                            <li><a href="#">Olá, <?php echo $logado ?></a></li>     
-                        </ul>
+                            <li><a href="<?php echo $linkSessao ?>"><?php echo $stringLogin ?> </a></li> 
+                            <li><a href="<?php echo $linkjogador ?>">Olá, <?php echo $logado ?></a></li>     
+                    </ul>
                 </div>
             </div>
         </nav>
