@@ -22,8 +22,18 @@ include "conexao.php";
             }
             else{
                 //Acesso do Cadastro ao BD
-                $comando= "Insert into jogador(USERNAME_JOGADOR,SENHA_JOGADOR,EMAIL_JOGADOR) values ('$user', '$pass', '$email')";
-                $resulta = mysqli_query($con,$comando);
+                $comando = "INSERT INTO jogador(USERNAME_JOGADOR, SENHA_JOGADOR, EMAIL_JOGADOR) VALUES (?, ?, ?)";
+                $stmt = mysqli_prepare($con, $comando);
+                if ($stmt) {
+                    mysqli_stmt_bind_param($stmt, "sss", $user, $pass, $email); // "sss" indicates three string parameters
+                    $resulta = mysqli_stmt_execute($stmt);
+                    mysqli_stmt_close($stmt);
+                } else {
+                    // Error preparing statement
+                    // For now, echo an error, but ideally log it and show a generic message
+                    echo "Erro na preparação da query: " . mysqli_error($con);
+                    $resulta = 0; // Ensure $resulta is set to indicate failure
+                }
 
                 //Confirmação do Cadastro no BD
                 if 
@@ -56,8 +66,18 @@ include "conexao.php";
             }
             else{
                 //Acesso do Cadastro ao BD
-                $comando= "Insert into jogador(USERNAME_JOGADOR,SENHA_JOGADOR,EMAIL_JOGADOR) values ('$user', '$pass', '$email')";
-                $resulta = mysqli_query($con,$comando);
+                $comando = "INSERT INTO jogador(USERNAME_JOGADOR, SENHA_JOGADOR, EMAIL_JOGADOR) VALUES (?, ?, ?)";
+                $stmt = mysqli_prepare($con, $comando);
+                if ($stmt) {
+                    mysqli_stmt_bind_param($stmt, "sss", $user, $pass, $email); // "sss" indicates three string parameters
+                    $resulta = mysqli_stmt_execute($stmt);
+                    mysqli_stmt_close($stmt);
+                } else {
+                    // Error preparing statement
+                    // For now, echo an error, but ideally log it and show a generic message
+                    echo "Erro na preparação da query: " . mysqli_error($con);
+                    $resulta = 0; // Ensure $resulta is set to indicate failure
+                }
 
                 //Confirmação do Cadastro no BD
                 if 
